@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+.contenedor-page {
+  height: 100vh;
+  position: relative;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* position: relative;
+  top: 40px; */
+  width: 100vw;
+  height: 100vh;
+  /* background-image: url("img/header-home-mobile.png"); */
+  background: #ffefba;
+  background: -webkit-linear-gradient(to right, #ffffff, #ffefba);
+  background: linear-gradient(to right, #ffffff, #ffefba);
+  /* SCROLL TRIGGER */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+@media (min-width: 668px) {
+  .welcome {
+    /* background-image: url("img/header-home-desktop.png"); */
+    /* background-color: rgb(255, 167, 134); */
+    height: 100vh;
+  }
+}
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+/* .imagen-header {
+  width: 100%;
+  height: 15vh;
+  margin: 0;
+} */
+.imagen-header-perfil {
+  width: 20vh;
+  height: 20vh;
+  position: absolute;
+  /* left: 50%; */
+  border-radius: 100%;
+}
+/* @media (min-width: 668px) { */
+.imagen-header {
+  width: 100%;
+  height: 20vh;
+  margin: 0;
+  object-fit: cover;
+}
+/* } */
+.welcome__texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80vh;
+}
+
+.welcome__titulo {
+  color: #555555;
+  font-size: 32px;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  margin: 20px 0px;
+}
+@media (min-width: 668px) {
+  .welcome__titulo {
+    font-size: 40px;
+  }
+}
+
+.welcome__subtitulo {
+  color: #555555;
+  font-size: 44px;
+  text-align: center;
+
+  font-family: "Lobster", cursive;
+  margin: 50px 0px;
+}
+@media (min-width: 668px) {
+  .welcome__subtitulo {
+    font-size: 58px;
+    margin: 20px 0px;
+  }
+}
+.boton-descargar-CV {
+  width: 140px;
+  height: 40px;
+}
+
+.welcome__redes-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.welcome__redes {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.welcome__redes-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome__redes-texto {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-weight: normal;
+  font-size: 16px;
+  color: #555555;
+  /* margin-right: 7px; */
+  margin-top: 7px;
+}
+
+.welcome__logo-github {
+  height: 50px;
+  width: 50px;
+  margin-bottom: -7px;
+  margin-top: -3px;
+}
+.welcome__logo-linkedin {
+  margin-bottom: -3px;
+  height: 42px;
+  width: 42px;
+}
+
+/*----------------------------------- PRESENTACIÓN -----------------------------------*/
+.presentacion {
+  width: 100vw;
+  height: 100vh;
+  background: #ffe796;
+  background: -webkit-linear-gradient(to right, #ffffff, #ffe796);
+  background: linear-gradient(to right, #ffffff, #ffe796);
+  margin-bottom: 0px;
+  /* SCROLL TRIGGER */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 800;
+}
+
+@media (min-width: 960px) {
+  .presentacion {
+    display: flex;
+    height: 100vh;
+
+    /* background-color: #ffffff; */
+  }
+}
+
+.presentacion__imagen-cont {
+  display: flex;
+  align-items: center;
+}
+
+.presentacion__imagen {
+  height: 340px;
+  width: 440px;
+  margin-left: 100px;
+  margin-right: 50px;
+  margin-top: 100px;
+  border-radius: 100%;
+}
+
+@media (max-width: 960px) {
+  .presentacion__imagen {
+    display: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .presentacion-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+    margin-right: 60px;
+  }
+}
+
+.presentacion__nombre {
+  margin: 0px;
+  padding: 95px 52px 20px 52px;
+  text-align: center;
+  font-family: "Concert One", cursive;
+  font-weight: 600;
+  font-size: 42px;
+  color: #555555;
+}
+
+@media (min-width: 960px) {
+  .presentacion__nombre {
+    color: #555555;
+    text-align: center;
+    margin: 0;
+    padding: 10px 40px;
+    font-size: 62px;
+  }
+}
+
+.presentacion__texto {
+  padding: 0 40px;
+  /* padding-right: 60px; */
+  font-size: 17px;
+  color: #555555;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  text-align: justify;
+}
+
+@media (min-width: 960px) {
+  .presentacion__texto {
+    color: #555555;
+    font-size: 18px;
+  }
+}
+
+/*---------------------------------------- PROYECTOS ---------------------------------------- */
+.proyectos {
+  width: 100vw;
+  /* margin-top: -35px; */
+  height: 220vh;
+  background: #ffefba;
+  background: -webkit-linear-gradient(to right, #ffffff, #ffefba);
+  background: linear-gradient(to right, #ffffff, #ffefba);
+  /* SCROLL TRIGGER */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 600;
+}
+@media (min-width: 960px) {
+  .proyectos {
+    height: 100vh;
+  }
+}
+.portfolio {
+  display: grid;
+  justify-content: center;
+  padding: 20px 40px;
+  margin-bottom: 146px;
+}
+
+@media (min-width: 960px) {
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding: 20px 90px;
+    margin-bottom: 146px;
+  }
+}
+
+@media (min-width: 960px) {
+  .portfolio__titulo-cont {
+    grid-column: 3;
+  }
+}
+.proyectos__title {
+  position: relative;
+  top: 82px;
+  z-index: 0;
+  font-family: "Concert One", cursive;
+  font-weight: 600;
+  font-size: 62px;
+  color: #555555;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .proyectos__title {
+    margin-left: 40px;
+    font-size: 32px;
+  }
+}
+
+.portfolio-card {
+  max-width: 600px;
+  margin-top: 106px;
+  text-align: center;
+}
+
+.portfolio-card__imagen {
+  object-fit: cover;
+  height: 128px;
+  width: 290px;
+}
+
+.portfolio-card-link {
+  color: #51aff3;
+  text-align: right;
+  display: block;
+  margin-top: 20px;
+}
+
+/* CONTACTO */
+
+.contacto {
+  padding-top: 90px;
+  /* display: grid; */
+  /* SCROLL TRIGGER */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 400;
+}
+@media (max-width: 768px) {
+  .contacto {
+    padding-top: 0px;
+  }
+}
+
+/* SCROLL TRIGGER */
+/* section {
+  position: absolute;
+} */

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Burgoa Francisco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Lobster&family=Roboto+Slab:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!----------------------------------------- GSAP ----------------------------------------->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"
+    ></script>
+    <!-- --------------------------------------------------------------------------- -->
+    <script defer src="./header/header.js"></script>
+    <link rel="stylesheet" href="./header/header.css" />
+
+    <script defer src="./contacto/contacto.js"></script>
+    <link rel="stylesheet" href="./contacto/contacto.css" />
+
+    <script defer src="./footer/footer.js"></script>
+    <link rel="stylesheet" href="./footer/footer.css" />
+
+    <link rel="stylesheet" href="./index.css" />
+    <script defer src="./index.js"></script>
+
+    <!-- <link rel="stylesheet" href="./portfolio.css" /> -->
+  </head>
+  <body>
+    <!-- <div class="header-cont"></div> -->
+    <div class="contenedor-page">
+      <section class="welcome" id="home">
+        <div class="header">
+          <img
+            class="imagen-header"
+            src="./img/programacion-2-e1551291144973.jpg"
+            alt=""
+          />
+          <img
+            class="imagen-header-perfil"
+            src="./img/foto-perfil2.jpeg"
+            alt=""
+          />
+        </div>
+        <div class="welcome__texto">
+          <div>
+            <h1 class="welcome__titulo hola">¡Hola! Soy</h1>
+            <h2 class="welcome__subtitulo">Francisco Burgoa</h2>
+            <h1 class="welcome__titulo rol">Fullstack Developer</h1>
+          </div>
+
+          <div class="welcome__redes-cont">
+            <div class="welcome__redes">
+              <a
+                class="welcome__redes-link linkedin"
+                href="https://www.linkedin.com/feed/"
+                target="_blank"
+              >
+                <img src="./img/linkedin.png" class="welcome__logo-linkedin" />
+                <span class="welcome__redes-texto">Linkedin</span>
+              </a>
+            </div>
+            <div class="welcome__redes">
+              <a
+                class="welcome__redes-link github"
+                href="https://github.com/Francisco-B07"
+                target="_blank"
+              >
+                <img src="./img/github.svg" class="welcome__logo-github" />
+                <span class="welcome__redes-texto">Github</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- <button class="boton-descargar-CV">Descargar CV</button> -->
+      </section>
+
+      <section class="presentacion" id="about">
+        <div class="presentacion__imagen-cont">
+          <img
+            src="./img/imagen-programador.webp"
+            class="presentacion__imagen"
+          />
+        </div>
+        <div class="presentacion-cont">
+          <h3 class="presentacion__nombre">Soy Francisco</h3>
+          <p class="presentacion__texto">
+            Un apasionado por la programación, soy responsable, alegre y
+            empático.
+            <br />
+            <br />
+            Comencé aprendiendo sobre el desarrollo web en el Programa Nacional
+            Argentina Programa. Luego me inscribí en APX school donde pude
+            ampliar mi conocimiento en HTML, CSS y JS.
+
+            <br />
+            <br />
+            Pude sumar mucha experiencia en trabajo en equipo bajo la
+            metodología scrum en el bootcamp organizado por folcademy (Folcamp)
+            donde durante 4 meses desarrollamos una web app para una ONG. El
+            Folcamp también me permitió ampliar mi conocimiento técnico en
+            Angular.
+          </p>
+        </div>
+      </section>
+
+      <section class="proyectos" id="proyectos">
+        <h2 class="proyectos__title">Proyectos</h2>
+        <div class="portfolio">
+          <template id="portfolio-template">
+            <div class="portfolio-card">
+              <img
+                src="./img/Compu.svg"
+                alt=""
+                class="portfolio-card__imagen"
+              />
+              <h3 class="portfolio-card__title"></h3>
+              <p class="portfolio-card__descripcion"></p>
+              <a href="" class="portfolio-card-link" target="_blank"
+                >ver más..</a
+              >
+            </div>
+          </template>
+        </div>
+      </section>
+      <section class="contacto">
+        <div class="contacto-cont" id="contacto"></div>
+        <div class="footer-cont"></div>
+      </section>
+    </div>
+  </body>
+</html>

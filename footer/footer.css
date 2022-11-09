@@ -1,0 +1,86 @@
+.footer {
+  height: 95px;
+  background: #fff2c7;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 100vw;
+
+  margin-top: 86vh;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    /* flex-direction: row; */
+    justify-content: space-between;
+    padding: 0 80px 0 40px;
+    margin-top: 72vh;
+  }
+}
+
+.footer__imagen {
+  zoom: 0.45;
+  margin: 0px;
+}
+
+.footer__redes-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+}
+@media (min-width: 768px) {
+  .footer__redes-cont {
+    width: 200px;
+  }
+}
+
+.footer__redes-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__redes-texto {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-weight: normal;
+  font-size: 13px;
+  color: #555555;
+  /* margin-right: 7px; */
+  margin-top: 7px;
+}
+@media (min-width: 768px) {
+  .footer__redes-texto {
+    font-size: 15px;
+    margin-top: 7px;
+  }
+}
+
+.logo-github {
+  height: 40px;
+  width: 40px;
+  margin-bottom: -7px;
+  margin-top: -3px;
+}
+@media (min-width: 768px) {
+  .logo-github {
+    height: 50px;
+    width: 50px;
+    margin-bottom: -7px;
+    margin-top: -3px;
+  }
+}
+.logo-linkedin {
+  margin-bottom: -3px;
+  height: 31px;
+  width: 31px;
+}
+@media (min-width: 768px) {
+  .logo-linkedin {
+    margin-bottom: -3px;
+    height: 42px;
+    width: 42px;
+  }
+}
