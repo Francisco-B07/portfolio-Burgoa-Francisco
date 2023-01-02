@@ -13,8 +13,10 @@ function addWorkCard(params = {}) {
     params.title;
   template.content.querySelector(".portfolio-card__descripcion").textContent =
     params.description;
+
   template.content.querySelector(".portfolio-card__imagen").src = params.image;
-  template.content.querySelector(".portfolio-card-link").href = params.url;
+  template.content.querySelector(".demo").href = params.url;
+  template.content.querySelector(".code").href = params.code;
 
   const clone = document.importNode(template.content, true);
   container.appendChild(clone);
@@ -28,6 +30,7 @@ function getWorks() {
       return res.json();
     })
     .then((data) => {
+      console.log(data);
       const imagenes = data.includes.Asset.map((item) => {
         return item.fields.file.url;
       });
@@ -36,19 +39,27 @@ function getWorks() {
           title: item.fields.titulo,
           description: item.fields.descripcion,
           url: item.fields.url,
+          code: item.fields.code,
+          id: item.fields.imagen.sys.id,
         };
       });
 
       for (var i = 0; i < fieldsCollections.length; i++) {
-        fieldsCollections[i].image = imagenes[i];
+        for (let j = 0; j < fieldsCollections.length; j++) {
+          var url = imagenes[j];
+          console.log(fieldsCollections[i].id);
+          if (url.includes(fieldsCollections[i].id)) {
+            fieldsCollections[i].image = imagenes[j];
+          }
+        }
       }
       return fieldsCollections;
     });
 }
 
 function main() {
-  // const headerContainer = document.querySelector(".header-cont");
-  // header(headerContainer);
+  const headerContainer = document.querySelector(".header-cont");
+  header(headerContainer);
 
   getWorks().then(function (works) {
     for (const w of works) {
@@ -121,101 +132,92 @@ function main() {
   // ----------------------------------SCROLL----------------------------------
   gsap.registerPlugin(ScrollTrigger);
 
-  const welcomeSection = document.querySelector(".welcome");
-  const presentacionImagen = document.querySelector(".presentacion__imagen");
-  const presentacionNombre = document.querySelector(".presentacion__nombre");
-  const presentacionTexto = document.querySelector(".presentacion__texto");
-  const presentacionSection = document.querySelector(".presentacion");
-  const proyectosTitulo = document.querySelector(".proyectos__title");
-  const proyectosCard = document.querySelector(".portfolio");
-  const proyectosSection = document.querySelector(".proyectos");
-  const contactoForm = document.querySelector(".contacto-cont");
-  const footerSection = document.querySelector(".footer-cont");
-
-  const tl = gsap
-    .timeline()
-    .to(welcomeSection, {
-      top: "-100vh",
-      duration: 2,
-    })
-    .from(
-      presentacionImagen,
-      {
-        duration: 1.5,
-        opacity: 0,
-        y: 100,
-      },
-      "-=1.3"
-    )
-    .from(
-      presentacionNombre,
-      {
-        duration: 1.5,
-        opacity: 0,
-        y: 100,
-      },
-      "-=1.6"
-    )
-    .from(
-      presentacionTexto,
-      {
-        duration: 1.5,
-        opacity: 0,
-        y: 100,
-      },
-      "-=1.3"
-    )
-    .to(
-      presentacionSection,
-      {
-        left: "100vw",
-        delay: 1,
-        duration: 1.5,
-        rotation: 180,
-      },
-      "-=0.7"
-    )
-    .from(
-      proyectosTitulo,
-      {
-        duration: 1.5,
-        opacity: 0,
-        x: -600,
-      },
-      "-=0.8"
-    )
-    .from(
-      proyectosCard,
-      {
-        duration: 1.5,
-        opacity: 0,
-        y: 100,
-      },
-      "-=1.5"
-    )
-    .to(proyectosSection, {
-      top: "-220vh",
-      delay: 0.7,
-      duration: 2,
-    });
+  // const welcomeSection = document.querySelector(".welcome");
+  // const presentacionImagen = document.querySelector(".presentacion__imagen");
+  // const presentacionNombre = document.querySelector(".presentacion__nombre");
+  // const presentacionTexto = document.querySelector(".presentacion__texto");
+  // const presentacionSection = document.querySelector(".presentacion");
+  // const proyectosTitulo = document.querySelector(".proyectos__title");
+  // const proyectosCard = document.querySelector(".portfolio");
+  // const proyectosSection = document.querySelector(".proyectos");
+  // const contactoForm = document.querySelector(".contacto-cont");
+  // const footerSection = document.querySelector(".footer-cont");
 
   // const tl = gsap
   //   .timeline()
-  //   .from(presentacionImagen, { duration: 2, y: 200 })
-  //   .from(presentacionNombre, { duration: 2, y: 200 }, "-=2")
-  //   .from(presentacionTexto, { duration: 2, y: 200 }, "-=2")
-  //   .from(proyectosTitulo, { duration: 2, y: 200 })
-  //   .from(proyectosCard, { duration: 2, y: 200 })
-  //   .from(contactoSection, { duration: 2, y: 100 });
+  //   .to(welcomeSection, {
+  //     top: "-100vh",
+  //     duration: 2,
+  //   })
+  //   .from(
+  //     presentacionImagen,
+  //     {
+  //       duration: 1.5,
+  //       opacity: 0,
+  //       y: 100,
+  //     },
+  //     "-=1.3"
+  //   )
+  //   .from(
+  //     presentacionNombre,
+  //     {
+  //       duration: 1.5,
+  //       opacity: 0,
+  //       y: 100,
+  //     },
+  //     "-=1.6"
+  //   )
+  //   .from(
+  //     presentacionTexto,
+  //     {
+  //       duration: 1.5,
+  //       opacity: 0,
+  //       y: 100,
+  //     },
+  //     "-=1.3"
+  //   )
+  //   .to(
+  //     presentacionSection,
+  //     {
+  //       left: "100vw",
+  //       delay: 1,
+  //       duration: 1.5,
+  //       rotation: 180,
+  //     },
+  //     "-=0.7"
+  //   )
+  //   .from(
+  //     proyectosTitulo,
+  //     {
+  //       duration: 1.5,
+  //       opacity: 0,
+  //       x: -600,
+  //     },
+  //     "-=0.8"
+  //   )
+  //   .from(
+  //     proyectosCard,
+  //     {
+  //       duration: 1.5,
+  //       opacity: 0,
+  //       y: 100,
+  //     },
+  //     "-=1.5"
+  //   )
+  //   .to(proyectosSection, {
+  //     top: "-220vh",
+  //     delay: 0.7,
+  //     duration: 2,
+  //   });
 
-  ScrollTrigger.create({
-    animation: tl,
-    trigger: ".contenedor-page",
-    start: "top top",
-    end: "+=3000",
-    scrub: true,
-    pin: true,
-  });
+  //   ScrollTrigger.create({
+  //     animation: tl,
+  //     trigger: ".contenedor-page",
+  //     start: "top top",
+  //     end: "+=3000",
+  //     scrub: true,
+  //     pin: true,
+  //   });
 }
 
 main();

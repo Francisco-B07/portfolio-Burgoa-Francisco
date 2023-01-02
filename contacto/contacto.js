@@ -11,7 +11,7 @@ function contacto(el) {
           </label>
           <label>
             <h3 class="contacto__label">EMAIL</h3>
-            <input class="contacto__input" name="email" type="text" />
+            <input class="contacto__input" name="email" type="email" />
           </label>
           <label>
             <h3 class="contacto__label">MENSAJE</h3>

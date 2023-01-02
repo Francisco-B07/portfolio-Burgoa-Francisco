@@ -1,26 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #ffefba;
+  --secondary: white;
+  --dark1: #5555555e;
+  --dark2: #050505;
+  --dark3: #222222;
+  --tipo-titular: "Playfair Display", serif;
+  --tipo-principal: "Inter", sans-serif;
+}
+
 .footer {
+  width: 100vw;
   height: 95px;
+  padding: 0 20px;
   background: #fff2c7;
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
-  width: 100vw;
-
-  margin-top: 86vh;
 }
 
 @media (min-width: 768px) {
   .footer {
-    /* flex-direction: row; */
-    justify-content: space-between;
     padding: 0 80px 0 40px;
-    margin-top: 72vh;
   }
 }
 
 .footer__imagen {
   zoom: 0.45;
   margin: 0px;
+  transition: transform 0.2s ease;
+}
+
+.footer__imagen:hover {
+  transform: scale(1.1);
 }
 
 .footer__redes-cont {
@@ -43,18 +63,15 @@
 }
 
 .footer__redes-texto {
-  font-family: "Roboto Slab", serif;
-  font-weight: 400;
-  font-weight: normal;
-  font-size: 13px;
-  color: #555555;
-  /* margin-right: 7px; */
   margin-top: 7px;
+  font-family: var(--tipo-principal);
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #555555;
 }
 @media (min-width: 768px) {
   .footer__redes-texto {
-    font-size: 15px;
-    margin-top: 7px;
+    font-size: 1rem;
   }
 }
 
@@ -68,8 +85,10 @@
   .logo-github {
     height: 50px;
     width: 50px;
-    margin-bottom: -7px;
-    margin-top: -3px;
+    transition: transform 0.2s ease;
+  }
+  .logo-github:hover {
+    transform: scale(1.2);
   }
 }
 .logo-linkedin {
@@ -79,8 +98,11 @@
 }
 @media (min-width: 768px) {
   .logo-linkedin {
-    margin-bottom: -3px;
     height: 42px;
     width: 42px;
+    transition: transform 0.2s ease;
+  }
+  .logo-linkedin:hover {
+    transform: scale(1.2);
   }
 }
