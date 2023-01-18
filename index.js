@@ -30,7 +30,6 @@ function getWorks() {
       return res.json();
     })
     .then((data) => {
-      console.log(data);
       const imagenes = data.includes.Asset.map((item) => {
         return item.fields.file.url;
       });
@@ -47,7 +46,6 @@ function getWorks() {
       for (var i = 0; i < fieldsCollections.length; i++) {
         for (let j = 0; j < fieldsCollections.length; j++) {
           var url = imagenes[j];
-          console.log(fieldsCollections[i].id);
           if (url.includes(fieldsCollections[i].id)) {
             fieldsCollections[i].image = imagenes[j];
           }
