@@ -298,8 +298,8 @@ body {
 
 .portfolio-card {
   margin-bottom: 30px;
-  max-width: 300px;
-  min-height: 55vh;
+  max-width: 320px;
+  min-height: 65vh;
   text-align: center;
   transition: transform 0.2s ease;
 }
@@ -317,7 +317,7 @@ body {
 
 .portfolio-card__imagen {
   object-fit: cover;
-  min-height: 55vh;
+  min-height: 65vh;
   width: 100%;
   border-radius: 10px;
   margin-bottom: 0px;
@@ -326,6 +326,7 @@ body {
 @media (max-width: 768px) {
   .portfolio-card__imagen {
     min-height: 15vh;
+    height: 15vh;
   }
 }
 
@@ -364,14 +365,14 @@ body {
   font-size: 1.4em;
   font-family: var(--tipo-titular);
   font-style: italic;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 @media (min-width: 768px) {
   .portfolio-card__title {
     font-size: 1.8em;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 10px;
   }
 }
@@ -380,13 +381,15 @@ body {
   font-size: 1rem;
   font-family: var(--tipo-principal);
   text-align: justify;
-  margin-bottom: 0px;
+  margin-bottom: 15px;
   white-space: pre-line;
+  padding: 0 5px;
 }
 
 @media (min-width: 768px) {
   .portfolio-card__descripcion {
     font-size: 1rem;
+    padding: 0 15px;
   }
 }
 
