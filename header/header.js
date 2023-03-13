@@ -2,7 +2,7 @@ function header(el) {
   const componentEl = document.createElement("div");
 
   componentEl.innerHTML = `    
-        <header  >
+        <header>
           <div class="header">
           <img
             class="imagen-header"
@@ -24,7 +24,7 @@ function header(el) {
             <nav id="nav">
               <ul >
                 <li><a href="#about" class="nav" onclick="responsiveMenu()">Sobre mi</a></li>
-                <li><a href="#proyectos" class="nav" onclick="responsiveMenu()">Portfolio</a></li>
+                <li><a href="#proyectos" class="nav" onclick="responsiveMenu()">Experiencia</a></li>
                 <li><a href="#contacto" class="nav" onclick="responsiveMenu()">Contacto</a></li>
               </ul>
             </nav>

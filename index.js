@@ -16,7 +16,10 @@ function addWorkCard(params = {}) {
 
   template.content.querySelector(".portfolio-card__imagen").src = params.image;
   template.content.querySelector(".demo").href = params.url;
-  template.content.querySelector(".code").href = params.code;
+  params.code
+    ? (template.content.querySelector(".code").href = params.code) &&
+      (template.content.querySelector(".code").style.display = "")
+    : (template.content.querySelector(".code").style.display = "none");
 
   const clone = document.importNode(template.content, true);
   container.appendChild(clone);

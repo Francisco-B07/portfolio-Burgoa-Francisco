@@ -93,3 +93,7 @@ body {
   height: 35px;
   cursor: pointer;
 }
+
+.contacto__submit-button:hover {
+  background-color: var(--dark2);
+}
