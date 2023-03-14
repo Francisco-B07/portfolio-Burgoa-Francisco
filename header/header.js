@@ -25,6 +25,7 @@ function header(el) {
               <ul >
                 <li><a href="#about" class="nav" onclick="responsiveMenu()">Sobre mi</a></li>
                 <li><a href="#proyectos" class="nav" onclick="responsiveMenu()">Experiencia</a></li>
+                <li><a href="#skills" class="nav" onclick="responsiveMenu()">Skills</a></li>
                 <li><a href="#contacto" class="nav" onclick="responsiveMenu()">Contacto</a></li>
               </ul>
             </nav>

@@ -25,9 +25,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #ffe796;
-  background: -webkit-linear-gradient(to right, #ffffff, #ffe796);
-  background: linear-gradient(to right, #ffffff, #ffe796);
+  background: #ffefba;
+  background: -webkit-linear-gradient(to right, #ffffff, #ffefba);
+  background: linear-gradient(to right, #ffffff, #ffefba);
   color: #555555;
 }
 
